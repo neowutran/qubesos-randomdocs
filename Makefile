@@ -5,4 +5,5 @@ compile: $(LATEX_FILE)
 	$(LATEX_COMPILER) $(LATEX_FILE)
 
 .PHONY: clean
-clean: rm *.aux *.blg *.out *.bbl *.log
+clean: 
+	rm -R *.aux *.blg *.out *.bbl *.log *.toc _minted*

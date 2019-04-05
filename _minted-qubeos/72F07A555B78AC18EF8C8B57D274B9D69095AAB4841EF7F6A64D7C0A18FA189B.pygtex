@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-Note, you cannot pass through devices from dom0
-(in other words: a USB VM is required).
-\end{Verbatim}
