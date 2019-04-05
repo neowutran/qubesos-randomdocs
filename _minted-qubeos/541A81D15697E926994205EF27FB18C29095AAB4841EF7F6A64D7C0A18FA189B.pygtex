@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+GRUB\PYGZbs{}\PYGZus{}CMDLINE\PYGZbs{}\PYGZus{}LINUX=\PYGZdq{}....
+rd.qubes.hide\PYGZbs{}\PYGZus{}pci=0a:00.0,0a:00.1
+ modprobe=xen\PYGZhy{}pciback.passthrough=1
+ xen\PYGZhy{}pciback.permissive\PYGZdq{}
+\end{Verbatim}

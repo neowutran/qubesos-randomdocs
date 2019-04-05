@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+find . \PYGZhy{}print0 \PYG{p}{|} cpio \PYGZhy{}\PYGZhy{}null \PYGZhy{}ov \PYG{l+s+se}{\PYGZbs{}}
+\PYGZhy{}\PYGZhy{}format\PYG{o}{=}newc \PYG{p}{|} gzip \PYGZhy{}9 \PYGZgt{} ../stubdom\PYGZhy{}linux\PYGZhy{}rootfs
+sudo mv ../stubdom\PYGZhy{}linux\PYGZhy{}rootfs /usr/lib/xen/boot/
+\end{Verbatim}

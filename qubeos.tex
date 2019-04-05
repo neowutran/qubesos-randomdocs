@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
-\usepackage{minted}
+\usepackage{minted}[breaklines]
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{graphicx}
@@ -24,7 +24,7 @@
   %----------------------------------------------------------------------------------------
 
   \textsc{\LARGE Qubes OS}\\[1.5cm] % Name of your university/college
-  \textsc{\Large Gaming HVM and Nitrokey}\\[0.5cm] % Major heading such as course name
+  \textsc{\Large Many things}\\[0.5cm] % Major heading such as course name
   %\large Yukikoo\\[0.5cm] % Minor heading such as course title
 
   %----------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@
   %----------------------------------------------------------------------------------------
 
   \HRule \\[0.4cm]
-  { \huge \bfseries Gaming HVM and Nitrokey}\\[0.4cm] % Title of your document
+  { \huge \bfseries Many things related to QubesOS}\\[0.4cm] % Title of your document
   \HRule \\[1.5cm]
 
   %----------------------------------------------------------------------------------------
@@ -243,5 +243,34 @@ If you are using a USB keyboard, you have 2 options:
 \item Create a sys-usb VM and assign a USB Controller to it.
 \item If you can't assign a USB Controller (ex: You only have 1 on your computer and can't buy another), then buy and use a PS/2 Keyboard.
 \end{itemize}
+
+\section{Recovery: Mount disk}
+You did some shit in your VMs, you can't launch them and have important data inside.
+In dom0:
+
+\begin{minted}{bash}
+sudo parted /dev/YOUR_VG/YOUR_VM unit B print
+\end{minted}
+
+Example:
+
+\begin{minted}{bash}
+$:sudo parted /dev/windows-vg/vg-game-root unit B print
+Model: Linux device-mapper (thin) (dm)
+Disk /dev/dm-138: 314572800000B
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start       End            Size           Type     File system  Flags
+ 1      1048576B    105906175B     104857600B     primary  ntfs         boot
+ 2      105906176B  314571751423B  314465845248B  primary  ntfs
+\end{minted}
+
+Then mount the partition you want
+
+\begin{minted}{text}
+sudo mount -o loop,offset=105906176 -t ntfs /dev/windows-vg/vg-game-root /mnt/
+\end{minted}
 
 \end{document}
