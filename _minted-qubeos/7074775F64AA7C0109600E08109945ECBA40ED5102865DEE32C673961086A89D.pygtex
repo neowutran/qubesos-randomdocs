@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nv}{SP}\PYG{o}{=}\PYG{l+s+s1}{\PYGZdl{}\PYGZsq{}\PYGZbs{}x1b\PYGZsq{}}
+\PYG{n+nv}{dm\PYGZus{}args}\PYG{o}{=}\PYG{k}{\PYGZdl{}(}\PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}dm\PYGZus{}args}\PYG{l+s+s2}{\PYGZdq{}} \PYG{l+s+se}{\PYGZbs{}}
+ \PYG{p}{|} sed \PYG{l+s+s2}{\PYGZdq{}s/\PYGZhy{}machine\PYGZbs{}\PYGZbs{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{SP}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{xenfv/\PYGZhy{}machine\PYGZbs{}}
+\PYG{l+s+s2}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{SP}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{xenfv,max\PYGZhy{}ram\PYGZhy{}below\PYGZhy{}4g=3.5G/g\PYGZdq{}}\PYG{k}{)}
+\end{Verbatim}

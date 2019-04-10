@@ -147,10 +147,7 @@ Then find the devices id for your secondary gpu. In my case, it is "dom0:0a\_00.
 Edit /etc/default/grub, and add the PCI hiding
 
 \begin{minted}{text}
-GRUB\_CMDLINE\_LINUX=".... 
-rd.qubes.hide\_pci=0a:00.0,0a:00.1 
- modprobe=xen-pciback.passthrough=1
- xen-pciback.permissive"
+GRUB_CMDLINE_LINUX="... rd.qubes.hide_pci=0a:00.0,0a:00.1 "
 \end{minted}
 
 then regenerate the grub

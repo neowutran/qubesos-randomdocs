@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+GRUB\PYGZus{}CMDLINE\PYGZus{}LINUX=\PYGZdq{}... rd.qubes.hide\PYGZus{}pci=0a:00.0,0a:00.1 \PYGZdq{}
+\end{Verbatim}
