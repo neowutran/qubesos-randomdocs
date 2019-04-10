@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-mkdir stubroot
-cp /usr/lib/xen/boot/stubdom\PYGZhy{}linux\PYGZhy{}rootfs stubroot/stubdom\PYGZhy{}linux\PYGZhy{}rootfs.gz
-\PYG{n+nb}{cd} stubroot
-gunzip stubdom\PYGZhy{}linux\PYGZhy{}rootfs.gz
-cpio \PYGZhy{}i \PYGZhy{}d \PYGZhy{}H newc \PYGZhy{}\PYGZhy{}no\PYGZhy{}absolute\PYGZhy{}filenames \PYGZlt{} stubdom\PYGZhy{}linux\PYGZhy{}rootfs
-rm stubdom\PYGZhy{}linux\PYGZhy{}rootfs
-nano init
-\end{Verbatim}
